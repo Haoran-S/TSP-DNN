@@ -15,18 +15,18 @@
 #  Written by Haoran Sun (hrsun AT iastate.edu)
 #  #################################################################
 
-import function_wmmse_powercontrol as wf
-import function_dnn_powercontrol as df
-import scipy.io as sio
-import numpy as np
-import matplotlib.pyplot as plt
+import scipy.io as sio                     # import scipy.io for .mat file I/O 
+import numpy as np                         # import numpy
+import matplotlib.pyplot as plt            # import matplotlib.pyplot for figure plotting
+import function_wmmse_powercontrol as wf   # import our function file
+import function_dnn_powercontrol as df     # import our function file
 
-K = 10                     #number of users
-num_H = 25000              #number of training samples
-num_test = 5000            #number of testing  samples
-training_epochs = 100      #number of training epochs
-trainseed = 0              #set random seed for training set
-testseed = 7               #set random seed for test set
+K = 10                     # number of users
+num_H = 25000              # number of training samples
+num_test = 5000            # number of testing  samples
+training_epochs = 100      # number of training epochs
+trainseed = 0              # set random seed for training set
+testseed = 7               # set random seed for test set
 
 # Problem Setup
 print('Gaussian IC Case: K=%d, Total Samples: %d, Total Iterations: %d\n'%(K, num_H, training_epochs))
