@@ -1,3 +1,14 @@
+# ###############################################
+# This file contains functions for deep neural network. 
+# Codes have been tested successfully on Python 3.6.0 with TensorFlow 1.0.0 and Numpy 1.12.0 support.
+#
+# References: [1] Haoran Sun, Xiangyi Chen, Qingjiang Shi, Mingyi Hong, Xiao Fu, and Nikos D. Sidiropoulos. 
+# "Learning to optimize: Training deep neural networks for wireless resource management." 
+# Signal Processing Advances in Wireless Communications (SPAWC), 2017 IEEE 18th International Workshop on. IEEE, 2017.
+#
+# version 1.0 -- February 2017. Written by Haoran Sun (hrsun AT iastate.edu)
+# ###############################################
+
 from __future__ import print_function
 import tensorflow as tf
 import numpy as np
@@ -64,8 +75,8 @@ def train(X, Y,location, training_epochs=300, batch_size=1000, LR= 0.001, n_hidd
     hidden_keep_prob = tf.placeholder(tf.float32)
     weights, biases = ini_weights(n_input, n_hidden_1, n_hidden_2, n_hidden_3, n_output)
     pred = multilayer_perceptron(x, weights, biases, input_keep_prob, hidden_keep_prob)
-    cost = tf.reduce_mean(tf.square(pred - y))
-    optimizer = tf.train.RMSPropOptimizer(learning_rate, 0.9).minimize(cost)
+    cost = tf.reduce_mean(tf.square(pred - y))    # cost function: MSE
+    optimizer = tf.train.RMSPropOptimizer(learning_rate, 0.9).minimize(cost) # training algorithms: RMSprop
     init = tf.global_variables_initializer()
     saver = tf.train.Saver()
     MSETime=np.zeros((training_epochs,3))
@@ -94,6 +105,7 @@ def train(X, Y,location, training_epochs=300, batch_size=1000, LR= 0.001, n_hidd
         saver.save(sess, location)
     return 0
 
+# Functions for deep neural network testing
 def test(X, model_location, save_name, n_input, n_output, n_hidden_1 = 200, n_hidden_2 = 80, n_hidden_3 = 80, binary=0):
     tf.reset_default_graph()
     x = tf.placeholder("float", [None, n_input])
