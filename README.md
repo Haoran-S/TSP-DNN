@@ -1,7 +1,5 @@
-# SPAWC_2017
+# Learning to optimize: Training deep neural networks for wireless resource management.
 Python code to reproduce our works on DNN research for SPAWC 2017. 
-
-Learning to optimize: Training deep neural networks for wireless resource management.
 
 Demo.py contains the whole process from data generation, training, testing to plotting for 10 users' IC case, even though such process done on a small dataset of 25000 samples, 94% accuracy can still be easily attained in less than 100 iterations.
 
