@@ -4,6 +4,7 @@ import numpy as np
 import scipy.io as sio
 import time
 
+# Functions for deep neural network weights initialization
 def ini_weights(n_input, n_hidden_1, n_hidden_2, n_hidden_3, n_output):
     weights = {
         'h1': tf.Variable(tf.truncated_normal([n_input, n_hidden_1]) / np.sqrt(n_input)),
@@ -19,12 +20,13 @@ def ini_weights(n_input, n_hidden_1, n_hidden_2, n_hidden_3, n_output):
     }
     return weights, biases
 
+# Functions for deep neural network structure construction
 def multilayer_perceptron(x, weights, biases,input_keep_prob,hidden_keep_prob):
-    # Hidden layer with RELU activation
-    x = tf.nn.dropout(x, input_keep_prob)
-    layer_1 = tf.add(tf.matmul(x, weights['h1']), biases['b1'])
-    layer_1 = tf.nn.relu(layer_1)
-    layer_1 = tf.nn.dropout(layer_1, hidden_keep_prob)
+    x = tf.nn.dropout(x, input_keep_prob)                         # dropout layer
+    
+    layer_1 = tf.add(tf.matmul(x, weights['h1']), biases['b1'])   # x = wx+b
+    layer_1 = tf.nn.relu(layer_1)                                 # x = max(0, x)
+    layer_1 = tf.nn.dropout(layer_1, hidden_keep_prob)            # dropout layer
 
     layer_2 = tf.add(tf.matmul(layer_1, weights['h2']), biases['b2'])
     layer_2 = tf.nn.relu(layer_2)
@@ -38,16 +40,18 @@ def multilayer_perceptron(x, weights, biases,input_keep_prob,hidden_keep_prob):
     out_layer = tf.nn.relu6(out_layer) / 6
     return out_layer
 
+
+# Functions for deep neural network training
 def train(X, Y,location, training_epochs=300, batch_size=1000, LR= 0.001, n_hidden_1 = 200,n_hidden_2 = 80,n_hidden_3 = 80, traintestsplit = 0.01, LRdecay=0):
-    num_total = X.shape[1]
-    num_val = int(num_total * traintestsplit)
-    num_train = num_total - num_val
-    n_input = X.shape[0]  # input size
-    n_output = Y.shape[0]  # output size
-    X_train = np.transpose(X[:, 0:num_train])
-    Y_train = np.transpose(Y[:, 0:num_train])
-    X_val = np.transpose(X[:, num_train:num_total])
-    Y_val = np.transpose(Y[:, num_train:num_total])
+    num_total = X.shape[1]                        # number of total samples
+    num_val = int(num_total * traintestsplit)     # number of validation samples
+    num_train = num_total - num_val               # number of training samples
+    n_input = X.shape[0]                          # input size
+    n_output = Y.shape[0]                         # output size
+    X_train = np.transpose(X[:, 0:num_train])     # training data
+    Y_train = np.transpose(Y[:, 0:num_train])     # training label
+    X_val = np.transpose(X[:, num_train:num_total]) # validation data
+    Y_val = np.transpose(Y[:, num_train:num_total]) # validation label
 
     x = tf.placeholder("float", [None, n_input])
     y = tf.placeholder("float", [None, n_output])
