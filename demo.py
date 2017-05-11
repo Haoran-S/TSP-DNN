@@ -36,7 +36,7 @@ Xtrain, Ytrain, wtime = wf.generate_Gaussian(K, num_H, seed=trainseed)
 
 # Training Deep Neural Networks
 print('train DNN ...')
-# ! Please modify this path !
+# Save & Load model from this path, ! Please modify this path ! 
 model_location = "/Users/SUN/Desktop/SPAWC2017-master/DNNmodel/model_demo.ckpt"
 df.train(Xtrain, Ytrain, model_location, training_epochs=training_epochs, traintestsplit = 0.2, batch_size=200)
 
