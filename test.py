@@ -27,7 +27,7 @@ for K in [10, 20, 30]:
     print('Gaussian IC Case: K=%d' % K)
     
     # Load model from this path, ! Please modify this path ! 
-    model_location = "/Users/SUN/Desktop/SPAWC2017-master/DNNmodel/model_%d.ckpt" % (K)
+    model_location = "./DNNmodel/model_%d.ckpt" % (K)
     
     # Generate Testing Data
     num_test = 1000     # number of testing samples
