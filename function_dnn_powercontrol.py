@@ -6,7 +6,7 @@
 # "Learning to optimize: Training deep neural networks for wireless resource management." 
 # Signal Processing Advances in Wireless Communications (SPAWC), 2017 IEEE 18th International Workshop on. IEEE, 2017.
 #
-# version 1.0 -- February 2017. Written by Haoran Sun (hrsun AT iastate.edu)
+# version 1.0 -- February 2017. Written by Haoran Sun (hrsun AT iastate.edu) and Xiangyi Chen (xiangyi AT iastate.edu)
 # ###############################################
 
 from __future__ import print_function
