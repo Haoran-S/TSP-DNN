@@ -12,4 +12,4 @@ References:
 
 version 1.0 -- February 2017. 
 
-Written by Haoran Sun (hrsun AT iastate.edu)
+Written by Haoran Sun and Xiangyi Chen (sun00111@umn.edu, chen5719@umn.edu)
