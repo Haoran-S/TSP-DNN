@@ -8,8 +8,13 @@ In test.py, we do the testing stage for Table I: Gaussian IC case in the paper, 
 All codes have been tested successfully on Python 3.6.0 with TensorFlow 1.0.0 and Numpy 1.12.0 support.
 
 References: 
-[1] Haoran Sun, Xiangyi Chen, Qingjiang Shi, Mingyi Hong, Xiao Fu, and Nikos D. Sidiropoulos. "Learning to optimize: Training deep neural networks for wireless resource management." in proceedings of the 18th International Workshop on Signal Processing Advances in Wireless Communications (SPAWC),  IEEE, 2017.
+[1] Haoran Sun, Xiangyi Chen, Qingjiang Shi, Mingyi Hong, Xiao Fu, and Nikos D. Sidiropoulos, "Learning to Optimize: Training Deep Neural Networks for Interference Management," in IEEE Transactions on Signal Processing, vol. 66, no. 20, pp. 5438-5453, 15 Oct.15, 2018.
+
 
 version 1.0 -- February 2017. 
 
 Written by Haoran Sun and Xiangyi Chen (sun00111@umn.edu, chen5719@umn.edu)
+
+
+----
+June 2019. Add files to generate the IMAC model in the IMAC_model folder.
