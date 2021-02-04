@@ -49,7 +49,7 @@ print('wmmse time: %0.3f s, dnn time: %0.3f s, time speed up: %0.1f X' % (wmmset
 
 # Evaluate Performance of DNN and WMMSE
 H = np.reshape(X, (K, K, X.shape[1]), order="F")
-NNVbb = sio.loadmat('Prediction_%d.mat' % K)['pred']
+NNVbb = sio.loadmat('Prediction_%d' % K)['pred']
 wf.perf_eval(H, Y, NNVbb, K)
 
 # Plot figures

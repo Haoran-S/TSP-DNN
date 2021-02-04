@@ -10,10 +10,13 @@
 # ###############################################
 
 from __future__ import print_function
-import tensorflow as tf
 import numpy as np
 import scipy.io as sio
 import time
+
+import tensorflow as tfn
+tf = tfn.compat.v1
+tf.disable_v2_behavior()
 
 # Functions for deep neural network weights initialization
 def ini_weights(n_input, n_hidden_1, n_hidden_2, n_hidden_3, n_output):
