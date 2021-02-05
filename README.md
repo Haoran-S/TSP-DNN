@@ -32,8 +32,11 @@ References:
 June 2019. Add files to generate the IMAC model in the IMAC_model folder.
 
 ----
-## [2020 Update] Welcome to check out our recent work on "Learning to Continuously Optimize Wireless Resource In Episodically Dynamic Environment"
+Jan. 2021. Thanks @RameshPaul for providing the up-to-date TensorFlow 2 setup!
+
+----
+## [Update] Welcome to check out our recent work on "Learning to Continuously Optimize Wireless Resource In Episodically Dynamic Environment"
 
 ### paper available at https://arxiv.org/abs/2011.07782 (short version to appear in ICASSP 2021)
-### code available at https://github.com/Haoran-S/ICASSP2021
+### code available at https://github.com/Haoran-S/TSP_CL
 
