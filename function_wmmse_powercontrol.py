@@ -2,11 +2,16 @@
 # This file includes functions to perform the WMMSE algorithm [2].
 # Codes have been tested successfully on Python 3.6.0 with Numpy 1.12.0 support.
 #
-# References: [1] Haoran Sun, Xiangyi Chen, Qingjiang Shi, Mingyi Hong, Xiao Fu, and Nikos D. Sidiropoulos. 
+# References: 
+# [1] Haoran Sun, Xiangyi Chen, Qingjiang Shi, Mingyi Hong, Xiao Fu, and Nikos D. Sidiropoulos. 
 # "Learning to optimize: Training deep neural networks for wireless resource management." 
-# Signal Processing Advances in Wireless Communications (SPAWC), 2017 IEEE 18th International Workshop on. IEEE, 2017.
+# in proceedings of IEEE 18th International Workshop on Signal Processing Advances in Wireless Communications (SPAWC), 2017.
+# 
+# [2] Haoran Sun, Xiangyi Chen, Qingjiang Shi, Mingyi Hong, Xiao Fu, and Nikos D. Sidiropoulos, 
+# "Learning to Optimize: Training Deep Neural Networks for Interference Management," 
+# in IEEE Transactions on Signal Processing, vol. 66, no. 20, pp. 5438-5453, 15 Oct.15, 2018.
 #
-# [2] Qingjiang Shi, Meisam Razaviyayn, Zhi-Quan Luo, and Chen He.
+# [3] Qingjiang Shi, Meisam Razaviyayn, Zhi-Quan Luo, and Chen He.
 # "An iteratively weighted MMSE approach to distributed sum-utility maximization for a MIMO interfering broadcast channel."
 # IEEE Transactions on Signal Processing 59, no. 9 (2011): 4331-4340.
 #
