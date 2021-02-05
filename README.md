@@ -24,3 +24,16 @@ June 2019. Add files to generate the IMAC model in the IMAC_model folder.
 
 ## paper available at https://arxiv.org/abs/2011.07782
 ## code will be posted at https://github.com/Haoran-S/ICASSP2021
+
+
+### Setup
+- Install python 3.6
+- Install pycharm community edition
+### Running application
+1. Install pip dependencies 
+```
+pip install -r requirements.txt
+```
+2. run the python files
+`python3 demo.py`
+`python3 test.py`
